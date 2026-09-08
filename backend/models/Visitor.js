@@ -31,6 +31,10 @@ const Visitor = sequelize.define("Visitor", {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
   },
+  converted: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false, // set to true once this visitor becomes a Member
+  },
   photo: {
     type: DataTypes.STRING, // will store a file path or URL, not the image itself
     allowNull: true,
